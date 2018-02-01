@@ -1,0 +1,1684 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: dvi_demo.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "dvi_demo.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "dvi_demo"
+Output Format                      : NGC
+Target Device                      : xc6slx25-3-ftg256
+
+---- Source Options
+Top Module Name                    : dvi_demo
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\DRAM16XN.v" into library work
+Parsing module <DRAM16XN>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\serdes_1_to_5_diff_data.v" into library work
+Parsing module <serdes_1_to_5_diff_data>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\phsaligner.v" into library work
+Parsing module <phsaligner>.
+INFO:HDLCompiler:693 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\phsaligner.v" Line 65. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\phsaligner.v" Line 66. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\phsaligner.v" Line 67. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\phsaligner.v" Line 68. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\phsaligner.v" Line 133. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\phsaligner.v" Line 134. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\phsaligner.v" Line 135. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\phsaligner.v" Line 136. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\phsaligner.v" Line 137. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\phsaligner.v" Line 138. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\phsaligner.v" Line 139. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\phsaligner.v" Line 169. parameter declaration becomes local in phsaligner with formal parameter declaration list
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\chnlbond.v" into library work
+Parsing module <chnlbond>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\TDMS_encoder.v" into library work
+Parsing module <TMDS_encoder>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\decode.v" into library work
+Parsing module <decode>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\synchro.v" into library work
+Parsing module <synchro>.
+WARNING:HDLCompiler:924 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\synchro.v" Line 87: Attribute target identifier fdb not found in this scope
+WARNING:HDLCompiler:924 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\synchro.v" Line 82: Attribute target identifier fda not found in this scope
+WARNING:HDLCompiler:924 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\synchro.v" Line 83: Attribute target identifier fdb not found in this scope
+WARNING:HDLCompiler:924 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\synchro.v" Line 84: Attribute target identifier fda not found in this scope
+WARNING:HDLCompiler:924 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\synchro.v" Line 85: Attribute target identifier fdb not found in this scope
+WARNING:HDLCompiler:924 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\synchro.v" Line 86: Attribute target identifier fda not found in this scope
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\serdes_n_to_1.v" into library work
+Parsing module <serdes_n_to_1>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\ipcore_dir\ddsc.v" into library work
+Parsing module <ddsc>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\hdmi_sl.v" into library work
+Parsing module <hdmi_sl>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\edid_256.v" into library work
+Parsing module <edid_256>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\dvi_decoder.v" into library work
+Parsing module <dvi_decoder>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\convert_30to15_fifo.v" into library work
+Parsing module <convert_30to15_fifo>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" into library work
+Parsing module <dvi_demo>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <dvi_demo>.
+
+Elaborating module <BUFIO2(DIVIDE_BYPASS="FALSE",DIVIDE=3)>.
+
+Elaborating module <BUFG>.
+
+Elaborating module <synchro(INITIALIZE="LOGIC0")>.
+
+Elaborating module <FDC>.
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" Line 55: Assignment to switch ignored, since the identifier is never used
+
+Elaborating module <edid_256>.
+Reading initialization file \"aedid.txt\".
+WARNING:HDLCompiler:872 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\edid_256.v" Line 49: Using initial value of dEPRM since it is never assigned
+WARNING:HDLCompiler:91 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\edid_256.v" Line 318: Signal <addr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\edid_256.v" Line 323: Signal <addr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\edid_256.v" Line 328: Signal <addr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\edid_256.v" Line 330: Signal <addr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\edid_256.v" Line 332: Signal <addr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\edid_256.v" Line 334: Signal <addr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\edid_256.v" Line 369: Signal <addr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\edid_256.v" Line 371: Signal <addr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\edid_256.v" Line 373: Signal <addr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\edid_256.v" Line 604: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\edid_256.v" Line 611: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\edid_256.v" Line 635: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\edid_256.v" Line 642: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\edid_256.v" Line 658: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\edid_256.v" Line 665: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <dvi_decoder>.
+
+Elaborating module <IBUFDS(IOSTANDARD="TMDS_33",DIFF_TERM="FALSE")>.
+
+Elaborating module <BUFIO2(DIVIDE_BYPASS="TRUE",DIVIDE=1)>.
+
+Elaborating module <PLL_BASE(CLKIN_PERIOD=10,CLKFBOUT_MULT=10,CLKOUT0_DIVIDE=1,CLKOUT1_DIVIDE=10,CLKOUT2_DIVIDE=5,COMPENSATION="INTERNAL")>.
+
+Elaborating module <BUFPLL(DIVIDE=5)>.
+
+Elaborating module <decode>.
+
+Elaborating module <serdes_1_to_5_diff_data(DIFF_TERM="FALSE",BITSLIP_ENABLE="TRUE")>.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\serdes_1_to_5_diff_data.v" Line 248: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\serdes_1_to_5_diff_data.v" Line 250: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\serdes_1_to_5_diff_data.v" Line 251: Result of 2-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <IBUFDS(DIFF_TERM="FALSE")>.
+
+Elaborating module <IODELAY2(DATA_RATE="SDR",IDELAY_VALUE=0,IDELAY2_VALUE=0,IDELAY_MODE="NORMAL",ODELAY_VALUE=0,IDELAY_TYPE="DIFF_PHASE_DETECTOR",COUNTER_WRAPAROUND="STAY_AT_LIMIT",DELAY_SRC="IDATAIN",SERDES_MODE="MASTER",SIM_TAPDELAY_VALUE=49)>.
+
+Elaborating module <IODELAY2(DATA_RATE="SDR",IDELAY_VALUE=0,IDELAY2_VALUE=0,IDELAY_MODE="NORMAL",ODELAY_VALUE=0,IDELAY_TYPE="DIFF_PHASE_DETECTOR",COUNTER_WRAPAROUND="WRAPAROUND",DELAY_SRC="IDATAIN",SERDES_MODE="SLAVE",SIM_TAPDELAY_VALUE=49)>.
+
+Elaborating module <ISERDES2(DATA_WIDTH=5,DATA_RATE="SDR",BITSLIP_ENABLE="TRUE",SERDES_MODE="MASTER",INTERFACE_TYPE="RETIMED")>.
+
+Elaborating module <ISERDES2(DATA_WIDTH=5,DATA_RATE="SDR",BITSLIP_ENABLE="TRUE",SERDES_MODE="SLAVE",INTERFACE_TYPE="RETIMED")>.
+
+Elaborating module <phsaligner>.
+WARNING:HDLCompiler:1308 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\phsaligner.v" Line 174: Found full_case directive in module phsaligner. Use of full_case directives may cause differences between RTL and post-synthesis simulation
+WARNING:HDLCompiler:1308 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\phsaligner.v" Line 221: Found full_case directive in module phsaligner. Use of full_case directives may cause differences between RTL and post-synthesis simulation
+
+Elaborating module <chnlbond>.
+
+Elaborating module <DRAM16XN(data_width=10)>.
+
+Elaborating module <RAM16X1D>.
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\dvi_decoder.v" Line 226: Assignment to de_g ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\dvi_decoder.v" Line 248: Assignment to de_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" Line 125: Assignment to rx0_pllclk2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" Line 126: Assignment to rx0_plllckd ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" Line 133: Assignment to rx0_blue_vld ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" Line 134: Assignment to rx0_green_vld ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" Line 135: Assignment to rx0_red_vld ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" Line 136: Assignment to rx0_blue_rdy ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" Line 137: Assignment to rx0_green_rdy ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" Line 138: Assignment to rx0_red_rdy ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" Line 140: Assignment to rx0_psalgnerr ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" Line 144: Assignment to rx0_green ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" Line 145: Assignment to rx0_blue ignored, since the identifier is never used
+
+Elaborating module <serdes_n_to_1(SF=5)>.
+
+Elaborating module <OSERDES2(DATA_WIDTH=5,DATA_RATE_OQ="SDR",DATA_RATE_OT="SDR",SERDES_MODE="MASTER",OUTPUT_MODE="DIFFERENTIAL")>.
+
+Elaborating module <OSERDES2(DATA_WIDTH=5,DATA_RATE_OQ="SDR",DATA_RATE_OT="SDR",SERDES_MODE="SLAVE",OUTPUT_MODE="DIFFERENTIAL")>.
+
+Elaborating module <OBUFDS>.
+
+Elaborating module <convert_30to15_fifo>.
+
+Elaborating module <DRAM16XN(data_width=30)>.
+
+Elaborating module <FDP>.
+
+Elaborating module <FD>.
+
+Elaborating module <FDR>.
+
+Elaborating module <FDRE>.
+
+Elaborating module <FDE>.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" Line 565: Result of 17-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <hdmi_sl>.
+WARNING:HDLCompiler:872 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\hdmi_sl.v" Line 90: Using initial value of contY since it is never assigned
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\hdmi_sl.v" Line 139: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\hdmi_sl.v" Line 141: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\hdmi_sl.v" Line 155: Assignment to red ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\hdmi_sl.v" Line 156: Assignment to green ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\hdmi_sl.v" Line 157: Assignment to blue ignored, since the identifier is never used
+
+Elaborating module <TMDS_encoder>.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\hdmi_sl.v" Line 169: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" Line 587: Assignment to tmdso ignored, since the identifier is never used
+
+Elaborating module <ddsc>.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" Line 639: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:552 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" Line 63: Input port SW[3] is not connected on this instance
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <dvi_demo>.
+    Related source file is "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v".
+WARNING:Xst:2898 - Port 'SW', unconnected in block instance 'OPTOMA', is tied to GND.
+WARNING:Xst:647 - Input <MSW> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" line 46: Output port <sync> of the instance <synchro_sws_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" line 49: Output port <sync> of the instance <synchro_sws_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" line 63: Output port <dLED> of the instance <OPTOMA> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" line 106: Output port <green> of the instance <dvi_rx0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" line 106: Output port <blue> of the instance <dvi_rx0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" line 106: Output port <pllclk2> of the instance <dvi_rx0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" line 106: Output port <pll_lckd> of the instance <dvi_rx0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" line 106: Output port <tmdsclk> of the instance <dvi_rx0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" line 106: Output port <blue_vld> of the instance <dvi_rx0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" line 106: Output port <green_vld> of the instance <dvi_rx0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" line 106: Output port <red_vld> of the instance <dvi_rx0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" line 106: Output port <blue_rdy> of the instance <dvi_rx0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" line 106: Output port <green_rdy> of the instance <dvi_rx0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" line 106: Output port <red_rdy> of the instance <dvi_rx0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" line 106: Output port <psalgnerr> of the instance <dvi_rx0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" line 575: Output port <tmdso> of the instance <HDMI_PORT2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\top.v" line 626: Output port <phase_out> of the instance <DDSM> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <toggle>.
+    Found 5-bit register for signal <tmdsclkint>.
+    Found 16-bit register for signal <fr_cntr>.
+    Found 1-bit register for signal <msw>.
+    Found 32-bit register for signal <px_cntr>.
+    Found 8-bit register for signal <LED>.
+    Found 1-bit register for signal <wrst>.
+    Found 8-bit register for signal <pdata>.
+    Found 16-bit adder for signal <fr_cntr[15]_GND_1_o_add_26_OUT> created at line 565.
+    Found 32-bit adder for signal <px_cntr[31]_GND_1_o_add_32_OUT> created at line 599.
+    Found 8-bit adder for signal <cosd3[7]_PWR_1_o_add_44_OUT> created at line 639.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  72 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <dvi_demo> synthesized.
+
+Synthesizing Unit <synchro>.
+    Related source file is "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\synchro.v".
+        INITIALIZE = "LOGIC0"
+    Summary:
+	no macro.
+Unit <synchro> synthesized.
+
+Synthesizing Unit <edid_256>.
+    Related source file is "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\edid_256.v".
+    Found 1-bit register for signal <SSTOP>.
+    Found 1-bit register for signal <oe_scl>.
+    Found 1-bit register for signal <rRW>.
+    Found 1-bit register for signal <addr<6>>.
+    Found 1-bit register for signal <addr<5>>.
+    Found 1-bit register for signal <addr<4>>.
+    Found 1-bit register for signal <addr<3>>.
+    Found 1-bit register for signal <addr<2>>.
+    Found 1-bit register for signal <addr<1>>.
+    Found 1-bit register for signal <addr<0>>.
+    Found 1-bit register for signal <oe_sda>.
+    Found 1-bit register for signal <START>.
+    Found 1-bit register for signal <ACK>.
+    Found 1-bit register for signal <GND_6_o_SCL_DFF_26_q>.
+    Found 1-bit register for signal <GND_6_o_SCL_DFF_27>.
+    Found 8-bit register for signal <cbyte>.
+    Found 4-bit register for signal <cbit>.
+    Found 8-bit register for signal <rdda>.
+    Found 8-bit register for signal <cbyte81>.
+    Found 4-bit register for signal <cbit81>.
+    Found 8-bit register for signal <rdda81>.
+    Found 8-bit register for signal <cbyte75>.
+    Found 4-bit register for signal <cbit75>.
+    Found 8-bit register for signal <rdda75>.
+    Found 1-bit register for signal <cSTATE<4>>.
+    Found 1-bit register for signal <cSTATE<3>>.
+    Found 1-bit register for signal <cSTATE<2>>.
+    Found 1-bit register for signal <cSTATE<1>>.
+    Found 1-bit register for signal <cSTATE<0>>.
+    Found 8-bit adder for signal <cbyte[7]_GND_6_o_add_76_OUT> created at line 604.
+    Found 4-bit adder for signal <cbit[3]_GND_6_o_add_79_OUT> created at line 611.
+    Found 8-bit adder for signal <cbyte81[7]_GND_6_o_add_93_OUT> created at line 635.
+    Found 4-bit adder for signal <cbit81[3]_GND_6_o_add_96_OUT> created at line 642.
+    Found 8-bit adder for signal <cbyte75[7]_GND_6_o_add_109_OUT> created at line 658.
+    Found 4-bit adder for signal <cbit75[3]_GND_6_o_add_112_OUT> created at line 665.
+    Found 256x8-bit Read Only RAM for signal <cbyte[7]_GND_6_o_wide_mux_78_OUT>
+    Found 32x8-bit Read Only RAM for signal <cbyte81[7]_X_6_o_wide_mux_95_OUT>
+    Found 1-bit 9-to-1 multiplexer for signal <cbit[3]_PWR_6_o_Mux_65_o> created at line 542.
+    Found 1-bit 9-to-1 multiplexer for signal <cbit81[3]_PWR_6_o_Mux_67_o> created at line 560.
+WARNING:Xst:737 - Found 1-bit latch for signal <offset_Ra1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <offset_R75>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rLED3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rLED1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rLED2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rLED0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit tristate buffer for signal <SCL> created at line 485
+    Found 1-bit tristate buffer for signal <SDA> created at line 486
+    Found 1-bit tristate buffer for signal <ddata> created at line 530
+    WARNING:Xst:2404 -  FFs/Latches <rLED6<3:3>> (without init value) have a constant value of 0 in block <edid_256>.
+    WARNING:Xst:2404 -  FFs/Latches <rLED5<0:0>> (without init value) have a constant value of 0 in block <edid_256>.
+    WARNING:Xst:2404 -  FFs/Latches <rLED4<0:0>> (without init value) have a constant value of 0 in block <edid_256>.
+    WARNING:Xst:2404 -  FFs/Latches <rLED7<0:0>> (without init value) have a constant value of 0 in block <edid_256>.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred  80 D-type flip-flop(s).
+	inferred   6 Latch(s).
+	inferred  37 Multiplexer(s).
+	inferred   3 Tristate(s).
+Unit <edid_256> synthesized.
+
+Synthesizing Unit <dvi_decoder>.
+    Related source file is "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\dvi_decoder.v".
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\dvi_decoder.v" line 208: Output port <c0> of the instance <dec_g> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\dvi_decoder.v" line 208: Output port <c1> of the instance <dec_g> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\dvi_decoder.v" line 208: Output port <de> of the instance <dec_g> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\dvi_decoder.v" line 230: Output port <c0> of the instance <dec_r> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\dvi_decoder.v" line 230: Output port <c1> of the instance <dec_r> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\dvi_decoder.v" line 230: Output port <de> of the instance <dec_r> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <dvi_decoder> synthesized.
+
+Synthesizing Unit <decode>.
+    Related source file is "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\decode.v".
+        CTRLTOKEN0 = 10'b1101010100
+        CTRLTOKEN1 = 10'b0010101011
+        CTRLTOKEN2 = 10'b0101010100
+        CTRLTOKEN3 = 10'b1010101011
+    Found 1-bit register for signal <toggle>.
+    Found 5-bit register for signal <raw5bit_q>.
+    Found 10-bit register for signal <rawword>.
+    Found 1-bit register for signal <bitslip_q>.
+    Found 1-bit register for signal <bitslipx2>.
+    Found 1-bit register for signal <c0>.
+    Found 1-bit register for signal <c1>.
+    Found 1-bit register for signal <de>.
+    Found 8-bit register for signal <dout>.
+    Found 10-bit register for signal <sdout>.
+    Found 1-bit register for signal <flipgearx2>.
+    Summary:
+	inferred  40 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <decode> synthesized.
+
+Synthesizing Unit <serdes_1_to_5_diff_data>.
+    Related source file is "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\serdes_1_to_5_diff_data.v".
+        DIFF_TERM = "FALSE"
+        SIM_TAP_DELAY = 49
+        BITSLIP_ENABLE = "TRUE"
+    Found 9-bit register for signal <counter>.
+    Found 5-bit register for signal <pdcounter>.
+    Found 4-bit register for signal <state>.
+    Found 1-bit register for signal <cal_data_master>.
+    Found 1-bit register for signal <cal_data_sint>.
+    Found 1-bit register for signal <enable>.
+    Found 1-bit register for signal <ce_data_inta>.
+    Found 1-bit register for signal <flag>.
+    Found 1-bit register for signal <rst_data>.
+    Found 1-bit register for signal <busy_data_d>.
+    Found 1-bit register for signal <incdec_data_d>.
+    Found 1-bit register for signal <valid_data_d>.
+    Found 1-bit register for signal <ce_data>.
+    Found 1-bit register for signal <inc_data_int>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 36                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 6                                              |
+    | Clock              | gclk (rising_edge)                             |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 9-bit adder for signal <counter[8]_GND_22_o_add_2_OUT> created at line 122.
+    Found 5-bit adder for signal <pdcounter[4]_GND_22_o_add_54_OUT> created at line 224.
+    Found 5-bit adder for signal <pdcounter[4]_PWR_23_o_add_57_OUT> created at line 227.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <serdes_1_to_5_diff_data> synthesized.
+
+Synthesizing Unit <phsaligner>.
+    Related source file is "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\phsaligner.v".
+        OPENEYE_CNT_WD = 3
+        CTKNCNTWD = 7
+        SRCHTIMERWD = 12
+    Found 1-bit register for signal <ctkn_srh_rst>.
+    Found 1-bit register for signal <ctkn_cnt_rst>.
+    Found 3-bit register for signal <bitslip_cnt>.
+    Found 6-bit register for signal <cstate>.
+    Found 1-bit register for signal <psaligned>.
+    Found 1-bit register for signal <bitslip>.
+    Found 1-bit register for signal <flipgear>.
+    Found 1-bit register for signal <blnkprd_cnt>.
+    Found 1-bit register for signal <rcvd_ctkn_q>.
+    Found 1-bit register for signal <blnkbgn>.
+    Found 12-bit register for signal <ctkn_srh_timer>.
+    Found 1-bit register for signal <ctkn_srh_tout>.
+    Found 7-bit register for signal <ctkn_counter>.
+    Found 1-bit register for signal <ctkn_cnt_tout>.
+    Found 1-bit register for signal <rcvd_ctkn>.
+    Found finite state machine <FSM_1> for signal <cstate>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000001                                         |
+    | Power Up State     | 000001                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 12-bit adder for signal <ctkn_srh_timer[11]_GND_30_o_add_6_OUT> created at line 98.
+    Found 7-bit adder for signal <ctkn_counter[6]_GND_30_o_add_12_OUT> created at line 122.
+    Found 3-bit adder for signal <bitslip_cnt[2]_GND_30_o_add_32_OUT> created at line 245.
+    Found 1-bit adder for signal <blnkprd_cnt[0]_PWR_30_o_add_33_OUT<0>> created at line 255.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+Unit <phsaligner> synthesized.
+
+Synthesizing Unit <chnlbond>.
+    Related source file is "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\chnlbond.v".
+        CTRLTOKEN0 = 10'b1101010100
+        CTRLTOKEN1 = 10'b0010101011
+        CTRLTOKEN2 = 10'b0101010100
+        CTRLTOKEN3 = 10'b1010101011
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\chnlbond.v" line 86: Output port <O_DATA_OUT> of the instance <cbfifo_i> is unconnected or connected to loadless signal.
+    Register <we> equivalent to <rawdata_vld_q> has been removed
+    Found 4-bit register for signal <wa>.
+    Found 10-bit register for signal <sdata>.
+    Found 1-bit register for signal <rcvd_ctkn>.
+    Found 1-bit register for signal <rcvd_ctkn_q>.
+    Found 1-bit register for signal <blnkbgn>.
+    Found 1-bit register for signal <skip_line>.
+    Found 1-bit register for signal <iamrdy>.
+    Found 1-bit register for signal <rawdata_vld_q>.
+    Found 1-bit register for signal <rawdata_vld_rising>.
+    Found 1-bit register for signal <ra_en>.
+    Found 4-bit register for signal <ra>.
+    Found 4-bit adder for signal <wa[3]_GND_32_o_add_2_OUT> created at line 79.
+    Found 4-bit adder for signal <ra[3]_GND_32_o_add_17_OUT> created at line 167.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+Unit <chnlbond> synthesized.
+
+Synthesizing Unit <DRAM16XN_1>.
+    Related source file is "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\DRAM16XN.v".
+        data_width = 10
+    Summary:
+	no macro.
+Unit <DRAM16XN_1> synthesized.
+
+Synthesizing Unit <serdes_n_to_1>.
+    Related source file is "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\serdes_n_to_1.v".
+        SF = 5
+    Summary:
+	no macro.
+Unit <serdes_n_to_1> synthesized.
+
+Synthesizing Unit <convert_30to15_fifo>.
+    Related source file is "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\convert_30to15_fifo.v".
+        ADDR0 = 4'b0000
+        ADDR1 = 4'b0001
+        ADDR2 = 4'b0010
+        ADDR3 = 4'b0011
+        ADDR4 = 4'b0100
+        ADDR5 = 4'b0101
+        ADDR6 = 4'b0110
+        ADDR7 = 4'b0111
+        ADDR8 = 4'b1000
+        ADDR9 = 4'b1001
+        ADDR10 = 4'b1010
+        ADDR11 = 4'b1011
+        ADDR12 = 4'b1100
+        ADDR13 = 4'b1101
+        ADDR14 = 4'b1110
+        ADDR15 = 4'b1111
+    Set property "ASYNC_REG = TRUE" for instance <fdp_rst>.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\convert_30to15_fifo.v" line 64: Output port <O_DATA_OUT> of the instance <fifo_u> is unconnected or connected to loadless signal.
+    Found 16x4-bit Read Only RAM for signal <wa_d>
+    Found 16x4-bit Read Only RAM for signal <ra_d>
+    Summary:
+	inferred   2 RAM(s).
+	inferred   1 Multiplexer(s).
+Unit <convert_30to15_fifo> synthesized.
+
+Synthesizing Unit <DRAM16XN_2>.
+    Related source file is "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\DRAM16XN.v".
+        data_width = 30
+    Summary:
+	no macro.
+Unit <DRAM16XN_2> synthesized.
+
+Synthesizing Unit <hdmi_sl>.
+    Related source file is "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\hdmi_sl.v".
+        HAPIX = 11'b01100100000
+        HFPOR = 11'b00000101000
+        HSPUL = 11'b00010000000
+        HBPOR = 11'b00001011000
+        VAPIX = 11'b01001011000
+        VFPOR = 11'b00000000001
+        VSPUL = 11'b00000000100
+        VBPOR = 11'b00000010111
+    Found 10-bit register for signal <TMDS_shift_red>.
+    Found 10-bit register for signal <TMDS_shift_green>.
+    Found 10-bit register for signal <TMDS_shift_blue>.
+    Found 4-bit register for signal <TMDS_modulo>.
+    Found 1-bit register for signal <shift_LOAD>.
+    Found 11-bit register for signal <contX>.
+    Found 11-bit adder for signal <contX[10]_GND_46_o_add_1_OUT> created at line 139.
+    Found 5-bit adder for signal <n0057[4:0]> created at line 169.
+    Found 11-bit comparator lessequal for signal <n0004> created at line 141
+    Found 11-bit comparator greater for signal <GND_46_o_contX[10]_LessThan_6_o> created at line 141
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  46 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <hdmi_sl> synthesized.
+
+Synthesizing Unit <TMDS_encoder>.
+    Related source file is "C:\Users\Ying Yu\Desktop\SelectIO\hdmi495\TDMS_encoder.v".
+    Found 4-bit register for signal <balance_acc>.
+    Found 10-bit register for signal <TMDS>.
+    Found 4-bit subtractor for signal <balance_acc_inc> created at line 37.
+    Found 4-bit subtractor for signal <balance_acc[3]_balance_acc_inc[3]_sub_29_OUT> created at line 38.
+    Found 2-bit adder for signal <n0109[1:0]> created at line 29.
+    Found 3-bit adder for signal <n0112[2:0]> created at line 29.
+    Found 2-bit adder for signal <n0130[1:0]> created at line 34.
+    Found 3-bit adder for signal <n0133[2:0]> created at line 34.
+    Found 4-bit adder for signal <balance_acc[3]_balance_acc_inc[3]_add_29_OUT> created at line 38.
+    Found 4-bit adder for signal <_n0160> created at line 29.
+    Found 4-bit adder for signal <_n0161> created at line 29.
+    Found 4-bit adder for signal <_n0162> created at line 29.
+    Found 4-bit adder for signal <_n0163> created at line 29.
+    Found 4-bit adder for signal <Nb1s> created at line 29.
+    Found 4-bit adder for signal <_n0165> created at line 34.
+    Found 4-bit subtractor for signal <_n0166> created at line 34.
+    Found 4-bit adder for signal <_n0167> created at line 34.
+    Found 4-bit adder for signal <_n0168> created at line 34.
+    Found 4-bit adder for signal <_n0169> created at line 34.
+    Found 4-bit adder for signal <balance> created at line 34.
+    Found 4-bit comparator greater for signal <GND_47_o_Nb1s[3]_LessThan_8_o> created at line 30
+    Found 1-bit comparator equal for signal <balance_sign_eq> created at line 35
+    Summary:
+	inferred  17 Adder/Subtractor(s).
+	inferred  14 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <TMDS_encoder> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 16x4-bit single-port Read Only RAM                    : 2
+ 256x8-bit single-port Read Only RAM                   : 1
+ 32x8-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 86
+ 1-bit adder                                           : 3
+ 11-bit adder                                          : 1
+ 12-bit adder                                          : 3
+ 16-bit adder                                          : 1
+ 2-bit adder                                           : 6
+ 3-bit adder                                           : 9
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 39
+ 4-bit addsub                                          : 3
+ 4-bit subtractor                                      : 6
+ 5-bit adder                                           : 4
+ 7-bit adder                                           : 3
+ 8-bit adder                                           : 4
+ 9-bit adder                                           : 3
+# Registers                                            : 196
+ 1-bit register                                        : 135
+ 10-bit register                                       : 15
+ 11-bit register                                       : 1
+ 12-bit register                                       : 3
+ 16-bit register                                       : 1
+ 3-bit register                                        : 3
+ 32-bit register                                       : 1
+ 4-bit register                                        : 13
+ 5-bit register                                        : 7
+ 7-bit register                                        : 3
+ 8-bit register                                        : 11
+ 9-bit register                                        : 3
+# Latches                                              : 6
+ 1-bit latch                                           : 6
+# Comparators                                          : 8
+ 1-bit comparator equal                                : 3
+ 11-bit comparator greater                             : 1
+ 11-bit comparator lessequal                           : 1
+ 4-bit comparator greater                              : 3
+# Multiplexers                                         : 103
+ 1-bit 2-to-1 multiplexer                              : 57
+ 1-bit 9-to-1 multiplexer                              : 2
+ 10-bit 2-to-1 multiplexer                             : 9
+ 15-bit 2-to-1 multiplexer                             : 1
+ 30-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 3
+ 5-bit 2-to-1 multiplexer                              : 19
+ 8-bit 2-to-1 multiplexer                              : 8
+ 9-bit 2-to-1 multiplexer                              : 3
+# Tristates                                            : 3
+ 1-bit tristate buffer                                 : 3
+# FSMs                                                 : 6
+# Xors                                                 : 57
+ 1-bit xor2                                            : 48
+ 7-bit xor2                                            : 6
+ 8-bit xor2                                            : 3
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/ddsc.ngc>.
+Loading core <ddsc> for timing and area information for instance <DDSM>.
+WARNING:Xst:1293 - FF/Latch <oe_scl> has a constant value of 0 in block <OPTOMA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <rdda75_6> of sequential type is unconnected in block <OPTOMA>.
+
+Synthesizing (advanced) Unit <TMDS_encoder>.
+The following registers are absorbed into accumulator <balance_acc>: 1 register on signal <balance_acc>.
+	The following adders/subtractors are grouped into adder tree <Madd_balance_Madd1> :
+ 	<Madd__n0169_Madd> in block <TMDS_encoder>, 	<Madd_n0130[1:0]> in block <TMDS_encoder>, 	<Madd_balance_Madd> in block <TMDS_encoder>.
+	The following adders/subtractors are grouped into adder tree <Madd_Nb1s_Madd1> :
+ 	<Madd__n0160> in block <TMDS_encoder>, 	<Madd__n0161> in block <TMDS_encoder>, 	<Madd__n0163_Madd> in block <TMDS_encoder>, 	<Madd_n0109[1:0]> in block <TMDS_encoder>, 	<Madd_Nb1s_Madd> in block <TMDS_encoder>.
+Unit <TMDS_encoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <chnlbond>.
+The following registers are absorbed into counter <wa>: 1 register on signal <wa>.
+The following registers are absorbed into counter <ra>: 1 register on signal <ra>.
+Unit <chnlbond> synthesized (advanced).
+
+Synthesizing (advanced) Unit <convert_30to15_fifo>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_wa_d> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <wa>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <wa_d>          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ra_d> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ra>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <ra_d>          |          |
+    -----------------------------------------------------------------------
+Unit <convert_30to15_fifo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <dvi_demo>.
+The following registers are absorbed into counter <px_cntr>: 1 register on signal <px_cntr>.
+The following registers are absorbed into counter <fr_cntr>: 1 register on signal <fr_cntr>.
+Unit <dvi_demo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <edid_256>.
+The following registers are absorbed into counter <cbyte81>: 1 register on signal <cbyte81>.
+The following registers are absorbed into counter <cbit81>: 1 register on signal <cbit81>.
+The following registers are absorbed into counter <cbit75>: 1 register on signal <cbit75>.
+The following registers are absorbed into counter <cbit>: 1 register on signal <cbit>.
+INFO:Xst:3231 - The small RAM <Mram_cbyte81[7]_X_6_o_wide_mux_95_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <cbyte81[7]_GND_6_o_add_93_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_cbyte[7]_GND_6_o_wide_mux_78_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <rdda>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <SCL>           | rise     |
+    |     enA            | connected to signal <GND_6_o_GND_6_o_equal_42_o_0> | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <cbyte[7]_GND_6_o_add_76_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <rdda>          |          |
+    |     dorstA         | connected to internal node          | low      |
+    | reset value        | 00000000                                       |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <edid_256> synthesized (advanced).
+
+Synthesizing (advanced) Unit <hdmi_sl>.
+The following registers are absorbed into counter <contX>: 1 register on signal <contX>.
+The following registers are absorbed into counter <TMDS_modulo>: 1 register on signal <TMDS_modulo>.
+Unit <hdmi_sl> synthesized (advanced).
+
+Synthesizing (advanced) Unit <phsaligner>.
+The following registers are absorbed into counter <ctkn_srh_timer>: 1 register on signal <ctkn_srh_timer>.
+The following registers are absorbed into counter <ctkn_counter>: 1 register on signal <ctkn_counter>.
+Unit <phsaligner> synthesized (advanced).
+
+Synthesizing (advanced) Unit <serdes_1_to_5_diff_data>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <serdes_1_to_5_diff_data> synthesized (advanced).
+WARNING:Xst:2677 - Node <rdda75_6> of sequential type is unconnected in block <edid_256>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 16x4-bit single-port distributed Read Only RAM        : 2
+ 256x8-bit single-port block Read Only RAM             : 1
+ 32x8-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 22
+ 1-bit adder                                           : 3
+ 3-bit adder                                           : 3
+ 4-bit adder carry in                                  : 3
+ 4-bit subtractor                                      : 6
+ 5-bit adder                                           : 3
+ 8-bit adder                                           : 4
+# Adder Trees                                          : 6
+ 4-bit / 4-inputs adder tree                           : 3
+ 4-bit / 6-inputs adder tree                           : 3
+# Counters                                             : 23
+ 11-bit up counter                                     : 1
+ 12-bit up counter                                     : 3
+ 16-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+ 4-bit up counter                                      : 10
+ 7-bit up counter                                      : 3
+ 8-bit up counter                                      : 1
+ 9-bit up counter                                      : 3
+# Accumulators                                         : 3
+ 4-bit updown accumulator                              : 3
+# Registers                                            : 461
+ Flip-Flops                                            : 461
+# Comparators                                          : 8
+ 1-bit comparator equal                                : 3
+ 11-bit comparator greater                             : 1
+ 11-bit comparator lessequal                           : 1
+ 4-bit comparator greater                              : 3
+# Multiplexers                                         : 97
+ 1-bit 2-to-1 multiplexer                              : 57
+ 1-bit 9-to-1 multiplexer                              : 2
+ 10-bit 2-to-1 multiplexer                             : 9
+ 15-bit 2-to-1 multiplexer                             : 1
+ 30-bit 2-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 19
+ 8-bit 2-to-1 multiplexer                              : 8
+# FSMs                                                 : 6
+# Xors                                                 : 57
+ 1-bit xor2                                            : 48
+ 7-bit xor2                                            : 6
+ 8-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch rLED3 hinder the constant cleaning in the block edid_256.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch rLED2 hinder the constant cleaning in the block edid_256.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch rLED1 hinder the constant cleaning in the block edid_256.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch rLED0 hinder the constant cleaning in the block edid_256.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <oe_scl> has a constant value of 0 in block <edid_256>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <tmdsclkint_0> in Unit <dvi_demo> is equivalent to the following 4 FFs/Latches, which will be removed : <tmdsclkint_1> <tmdsclkint_2> <tmdsclkint_3> <tmdsclkint_4> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <dvi_rx0/dec_b/des_0/FSM_0> on signal <state[1:4]> with user encoding.
+Optimizing FSM <dvi_rx0/dec_g/des_0/FSM_0> on signal <state[1:4]> with user encoding.
+Optimizing FSM <dvi_rx0/dec_r/des_0/FSM_0> on signal <state[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0010  | 0010
+ 0011  | 0011
+ 0100  | 0100
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 0001  | 0001
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <dvi_rx0/dec_b/phsalgn_0/FSM_1> on signal <cstate[1:6]> with user encoding.
+Optimizing FSM <dvi_rx0/dec_g/phsalgn_0/FSM_1> on signal <cstate[1:6]> with user encoding.
+Optimizing FSM <dvi_rx0/dec_r/phsalgn_0/FSM_1> on signal <cstate[1:6]> with user encoding.
+--------------------
+ State  | Encoding
+--------------------
+ 000001 | 000001
+ 000010 | 000010
+ 000100 | 000100
+ 001000 | 001000
+ 010000 | 010000
+ 100000 | 100000
+--------------------
+WARNING:Xst:2677 - Node <cbyte75_3> of sequential type is unconnected in block <edid_256>.
+WARNING:Xst:2677 - Node <cbyte75_4> of sequential type is unconnected in block <edid_256>.
+WARNING:Xst:2677 - Node <cbyte75_5> of sequential type is unconnected in block <edid_256>.
+WARNING:Xst:2677 - Node <cbyte75_6> of sequential type is unconnected in block <edid_256>.
+WARNING:Xst:2677 - Node <cbyte75_7> of sequential type is unconnected in block <edid_256>.
+WARNING:Xst:2677 - Node <cbyte81_5> of sequential type is unconnected in block <edid_256>.
+WARNING:Xst:2677 - Node <cbyte81_6> of sequential type is unconnected in block <edid_256>.
+WARNING:Xst:2677 - Node <cbyte81_7> of sequential type is unconnected in block <edid_256>.
+INFO:Xst:1901 - Instance PLL_ISERDES in unit PLL_ISERDES of type PLL_BASE has been replaced by PLL_ADV
+WARNING:Xst:1989 - Unit <hdmi_sl>: instances <iRED>, <iGREEN> of unit <TMDS_encoder> are equivalent, second instance is removed
+WARNING:Xst:2677 - Node <OPTOMA/rLED3> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <OPTOMA/rLED0> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <OPTOMA/rLED1> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <OPTOMA/rLED2> of sequential type is unconnected in block <dvi_demo>.
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_9> in Unit <hdmi_sl> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_9> 
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    OPTOMA/cSTATE_0 in unit <dvi_demo>
+
+WARNING:Xst:2041 - Unit dvi_demo: 1 internal tristate is replaced by logic (pull-up yes): OPTOMA/ddata.
+
+Optimizing unit <DRAM16XN_1> ...
+
+Optimizing unit <DRAM16XN_2> ...
+
+Optimizing unit <dvi_demo> ...
+
+Optimizing unit <dvi_decoder> ...
+
+Optimizing unit <decode> ...
+
+Optimizing unit <serdes_1_to_5_diff_data> ...
+
+Optimizing unit <phsaligner> ...
+
+Optimizing unit <chnlbond> ...
+
+Optimizing unit <convert_30to15_fifo> ...
+
+Optimizing unit <hdmi_sl> ...
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_8> in Unit <hdmi_sl> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_8> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_7> in Unit <hdmi_sl> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_7> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_6> in Unit <hdmi_sl> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_6> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_5> in Unit <hdmi_sl> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_5> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_4> in Unit <hdmi_sl> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_4> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_3> in Unit <hdmi_sl> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_3> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_8> in Unit <hdmi_sl> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_8> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_7> in Unit <hdmi_sl> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_7> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_6> in Unit <hdmi_sl> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_6> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_5> in Unit <hdmi_sl> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_5> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_4> in Unit <hdmi_sl> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_4> 
+INFO:Xst:2261 - The FF/Latch <TMDS_shift_red_3> in Unit <hdmi_sl> is equivalent to the following FF/Latch, which will be removed : <TMDS_shift_green_3> 
+
+Optimizing unit <TMDS_encoder> ...
+WARNING:Xst:2677 - Node <dvi_rx0/dec_r/de> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_r/c1> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_r/c0> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_g/dout_7> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_g/dout_6> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_g/dout_5> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_g/dout_4> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_g/dout_3> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_g/dout_2> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_g/dout_1> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_g/dout_0> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_g/de> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_g/c1> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_g/c0> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_b/dout_7> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_b/dout_6> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_b/dout_5> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_b/dout_4> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_b/dout_3> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_b/dout_2> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_b/dout_1> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <dvi_rx0/dec_b/dout_0> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_modulo_3> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_modulo_2> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_modulo_1> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_modulo_0> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_blue_9> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_blue_8> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_blue_7> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_blue_6> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_blue_5> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_blue_4> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_blue_3> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_blue_2> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_blue_1> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_blue_0> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_green_2> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_green_1> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_green_0> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_red_9> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_red_8> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_red_7> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_red_6> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_red_5> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_red_4> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_red_3> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_red_2> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_red_1> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/TMDS_shift_red_0> of sequential type is unconnected in block <dvi_demo>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/shift_LOAD> of sequential type is unconnected in block <dvi_demo>.
+INFO:Xst:2261 - The FF/Latch <dvi_rx0/dec_b/cbnd/wa_0> in Unit <dvi_demo> is equivalent to the following 2 FFs/Latches, which will be removed : <dvi_rx0/dec_g/cbnd/wa_0> <dvi_rx0/dec_r/cbnd/wa_0> 
+INFO:Xst:2261 - The FF/Latch <dvi_rx0/dec_b/cbnd/wa_1> in Unit <dvi_demo> is equivalent to the following 2 FFs/Latches, which will be removed : <dvi_rx0/dec_g/cbnd/wa_1> <dvi_rx0/dec_r/cbnd/wa_1> 
+INFO:Xst:2261 - The FF/Latch <dvi_rx0/dec_b/cbnd/wa_2> in Unit <dvi_demo> is equivalent to the following 2 FFs/Latches, which will be removed : <dvi_rx0/dec_g/cbnd/wa_2> <dvi_rx0/dec_r/cbnd/wa_2> 
+INFO:Xst:2261 - The FF/Latch <dvi_rx0/dec_b/cbnd/wa_3> in Unit <dvi_demo> is equivalent to the following 2 FFs/Latches, which will be removed : <dvi_rx0/dec_g/cbnd/wa_3> <dvi_rx0/dec_r/cbnd/wa_3> 
+INFO:Xst:2261 - The FF/Latch <dvi_rx0/dec_b/des_0/counter_0> in Unit <dvi_demo> is equivalent to the following 2 FFs/Latches, which will be removed : <dvi_rx0/dec_g/des_0/counter_0> <dvi_rx0/dec_r/des_0/counter_0> 
+INFO:Xst:2261 - The FF/Latch <dvi_rx0/dec_b/des_0/counter_1> in Unit <dvi_demo> is equivalent to the following 2 FFs/Latches, which will be removed : <dvi_rx0/dec_g/des_0/counter_1> <dvi_rx0/dec_r/des_0/counter_1> 
+INFO:Xst:2261 - The FF/Latch <dvi_rx0/dec_b/des_0/counter_2> in Unit <dvi_demo> is equivalent to the following 2 FFs/Latches, which will be removed : <dvi_rx0/dec_g/des_0/counter_2> <dvi_rx0/dec_r/des_0/counter_2> 
+INFO:Xst:2261 - The FF/Latch <dvi_rx0/dec_b/des_0/counter_3> in Unit <dvi_demo> is equivalent to the following 2 FFs/Latches, which will be removed : <dvi_rx0/dec_g/des_0/counter_3> <dvi_rx0/dec_r/des_0/counter_3> 
+INFO:Xst:2261 - The FF/Latch <dvi_rx0/dec_b/des_0/counter_4> in Unit <dvi_demo> is equivalent to the following 2 FFs/Latches, which will be removed : <dvi_rx0/dec_g/des_0/counter_4> <dvi_rx0/dec_r/des_0/counter_4> 
+INFO:Xst:2261 - The FF/Latch <dvi_rx0/dec_b/des_0/counter_5> in Unit <dvi_demo> is equivalent to the following 2 FFs/Latches, which will be removed : <dvi_rx0/dec_g/des_0/counter_5> <dvi_rx0/dec_r/des_0/counter_5> 
+INFO:Xst:2261 - The FF/Latch <dvi_rx0/dec_b/des_0/counter_6> in Unit <dvi_demo> is equivalent to the following 2 FFs/Latches, which will be removed : <dvi_rx0/dec_g/des_0/counter_6> <dvi_rx0/dec_r/des_0/counter_6> 
+INFO:Xst:2261 - The FF/Latch <dvi_rx0/dec_b/des_0/counter_7> in Unit <dvi_demo> is equivalent to the following 2 FFs/Latches, which will be removed : <dvi_rx0/dec_g/des_0/counter_7> <dvi_rx0/dec_r/des_0/counter_7> 
+INFO:Xst:2261 - The FF/Latch <dvi_rx0/dec_b/des_0/counter_8> in Unit <dvi_demo> is equivalent to the following 2 FFs/Latches, which will be removed : <dvi_rx0/dec_g/des_0/counter_8> <dvi_rx0/dec_r/des_0/counter_8> 
+INFO:Xst:2261 - The FF/Latch <dvi_rx0/dec_b/cbnd/rawdata_vld_q> in Unit <dvi_demo> is equivalent to the following 2 FFs/Latches, which will be removed : <dvi_rx0/dec_g/cbnd/rawdata_vld_q> <dvi_rx0/dec_r/cbnd/rawdata_vld_q> 
+INFO:Xst:2261 - The FF/Latch <toggle> in Unit <dvi_demo> is equivalent to the following 3 FFs/Latches, which will be removed : <dvi_rx0/dec_r/toggle> <dvi_rx0/dec_g/toggle> <dvi_rx0/dec_b/toggle> 
+INFO:Xst:2261 - The FF/Latch <dvi_rx0/dec_b/des_0/enable> in Unit <dvi_demo> is equivalent to the following 2 FFs/Latches, which will be removed : <dvi_rx0/dec_g/des_0/enable> <dvi_rx0/dec_r/des_0/enable> 
+INFO:Xst:2261 - The FF/Latch <HDMI_PORT2/iBLUE/balance_acc_0> in Unit <dvi_demo> is equivalent to the following FF/Latch, which will be removed : <HDMI_PORT2/iRED/balance_acc_0> 
+INFO:Xst:2261 - The FF/Latch <HDMI_PORT2/iBLUE/balance_acc_1> in Unit <dvi_demo> is equivalent to the following FF/Latch, which will be removed : <HDMI_PORT2/iRED/balance_acc_1> 
+INFO:Xst:2261 - The FF/Latch <HDMI_PORT2/iBLUE/balance_acc_2> in Unit <dvi_demo> is equivalent to the following FF/Latch, which will be removed : <HDMI_PORT2/iRED/balance_acc_2> 
+INFO:Xst:2261 - The FF/Latch <HDMI_PORT2/iBLUE/balance_acc_3> in Unit <dvi_demo> is equivalent to the following FF/Latch, which will be removed : <HDMI_PORT2/iRED/balance_acc_3> 
+INFO:Xst:2261 - The FF/Latch <dvi_rx0/dec_b/cbnd/rawdata_vld_rising> in Unit <dvi_demo> is equivalent to the following 2 FFs/Latches, which will be removed : <dvi_rx0/dec_g/cbnd/rawdata_vld_rising> <dvi_rx0/dec_r/cbnd/rawdata_vld_rising> 
+INFO:Xst:2261 - The FF/Latch <OPTOMA/cbyte81_4> in Unit <dvi_demo> is equivalent to the following FF/Latch, which will be removed : <OPTOMA/rdda81_7> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block dvi_demo, actual ratio is 7.
+INFO:Xst:2260 - The FF/Latch <synchro_sws_1/use_fdc.fda> in Unit <dvi_demo> is equivalent to the following FF/Latch : <synchro_sws_0/use_fdc.fda> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 568
+ Flip-Flops                                            : 568
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : dvi_demo.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1091
+#      GND                         : 2
+#      INV                         : 29
+#      LUT1                        : 93
+#      LUT2                        : 112
+#      LUT3                        : 132
+#      LUT4                        : 93
+#      LUT5                        : 89
+#      LUT6                        : 193
+#      MUXCY                       : 165
+#      MUXF7                       : 8
+#      VCC                         : 2
+#      XORCY                       : 173
+# FlipFlops/Latches                : 733
+#      FD                          : 281
+#      FD_1                        : 3
+#      FDC                         : 80
+#      FDCE                        : 12
+#      FDE                         : 91
+#      FDP                         : 11
+#      FDPE                        : 3
+#      FDR                         : 177
+#      FDRE                        : 72
+#      LD                          : 2
+#      LDC                         : 1
+# RAMS                             : 62
+#      RAM16X1D                    : 60
+#      RAMB8BWER                   : 2
+# Clock Buffers                    : 6
+#      BUFG                        : 6
+# IO Buffers                       : 23
+#      BUFIO2                      : 2
+#      IBUF                        : 1
+#      IBUFDS                      : 4
+#      IOBUF                       : 2
+#      OBUF                        : 10
+#      OBUFDS                      : 4
+# Others                           : 22
+#      BUFPLL                      : 1
+#      IODELAY2                    : 6
+#      ISERDES2                    : 6
+#      OSERDES2                    : 8
+#      PLL_ADV                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx25ftg256-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             733  out of  30064     2%  
+ Number of Slice LUTs:                  861  out of  15032     5%  
+    Number used as Logic:               741  out of  15032     4%  
+    Number used as Memory:              120  out of   3664     3%  
+       Number used as RAM:              120
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1162
+   Number with an unused Flip Flop:     429  out of   1162    36%  
+   Number with an unused LUT:           301  out of   1162    25%  
+   Number of fully used LUT-FF pairs:   432  out of   1162    37%  
+   Number of unique control sets:        53
+
+IO Utilization: 
+ Number of IOs:                          30
+ Number of bonded IOBs:                  29  out of    186    15%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     52     1%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                6  out of     16    37%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------------------+---------------------------+-------+
+Clock Signal                                                                 | Clock buffer(FF name)     | Load  |
+-----------------------------------------------------------------------------+---------------------------+-------+
+dvi_rx0/PLL_ISERDES/CLKOUT1                                                  | BUFG                      | 372   |
+dvi_rx0/PLL_ISERDES/CLKOUT2                                                  | BUFG                      | 173   |
+clk100                                                                       | IBUF+BUFIO2+BUFG          | 5     |
+dvi_rx0/dec_b/c1                                                             | NONE(fr_cntr_0)           | 17    |
+DDC_SCL                                                                      | IBUF+BUFG                 | 61    |
+DDC_SDA                                                                      | IBUF                      | 1     |
+OPTOMA/cSTATE[4]_GND_7_o_Mux_30_o(OPTOMA/Mmux_cSTATE[4]_GND_7_o_Mux_30_o11:O)| NONE(*)(OPTOMA/offset_Ra1)| 1     |
+OPTOMA/cSTATE[4]_GND_8_o_Mux_31_o(OPTOMA/Mmux_cSTATE[4]_GND_8_o_Mux_31_o11:O)| NONE(*)(OPTOMA/offset_R75)| 1     |
+dvi_rx0/dec_b/c0                                                             | BUFG                      | 163   |
+OPTOMA/START                                                                 | NONE(OPTOMA/cSTATE_0_LDC) | 1     |
+-----------------------------------------------------------------------------+---------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 9.618ns (Maximum Frequency: 103.972MHz)
+   Minimum input arrival time before clock: 4.739ns
+   Maximum output required time after clock: 4.484ns
+   Maximum combinational path delay: 3.290ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'dvi_rx0/PLL_ISERDES/CLKOUT1'
+  Clock period: 9.618ns (frequency: 103.972MHz)
+  Total number of paths / destination ports: 18890 / 948
+-------------------------------------------------------------------------
+Delay:               4.809ns (Levels of Logic = 4)
+  Source:            HDMI_PORT2/contX_3 (FF)
+  Destination:       HDMI_PORT2/iBLUE/balance_acc_1 (FF)
+  Source Clock:      dvi_rx0/PLL_ISERDES/CLKOUT1 falling
+  Destination Clock: dvi_rx0/PLL_ISERDES/CLKOUT1 rising
+
+  Data Path: HDMI_PORT2/contX_3 to HDMI_PORT2/iBLUE/balance_acc_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.447   0.995  HDMI_PORT2/contX_3 (HDMI_PORT2/contX_3)
+     LUT5:I0->O            3   0.203   0.651  HDMI_PORT2/contX[10]_GND_46_o_AND_54_o1 (HDMI_PORT2/contX[10]_GND_46_o_AND_54_o1)
+     LUT5:I4->O           21   0.205   1.218  HDMI_PORT2/contX[10]_GND_46_o_AND_54_o2 (HDMI_PORT2/contX[10]_GND_46_o_AND_54_o2)
+     LUT6:I4->O            1   0.203   0.580  HDMI_PORT2/iBLUE/balance_acc_1_rstpot_SW0_SW0 (N87)
+     LUT6:I5->O            1   0.205   0.000  HDMI_PORT2/iBLUE/balance_acc_1_rstpot (HDMI_PORT2/iBLUE/balance_acc_1_rstpot)
+     FD:D                      0.102          HDMI_PORT2/iBLUE/balance_acc_1
+    ----------------------------------------
+    Total                      4.809ns (1.365ns logic, 3.444ns route)
+                                       (28.4% logic, 71.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'dvi_rx0/PLL_ISERDES/CLKOUT2'
+  Clock period: 5.028ns (frequency: 198.876MHz)
+  Total number of paths / destination ports: 1375 / 211
+-------------------------------------------------------------------------
+Delay:               5.028ns (Levels of Logic = 3)
+  Source:            dvi_rx0/dec_g/des_0/pdcounter_4 (FF)
+  Destination:       dvi_rx0/dec_g/des_0/pdcounter_4 (FF)
+  Source Clock:      dvi_rx0/PLL_ISERDES/CLKOUT2 rising
+  Destination Clock: dvi_rx0/PLL_ISERDES/CLKOUT2 rising
+
+  Data Path: dvi_rx0/dec_g/des_0/pdcounter_4 to dvi_rx0/dec_g/des_0/pdcounter_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             7   0.447   1.118  dvi_rx0/dec_g/des_0/pdcounter_4 (dvi_rx0/dec_g/des_0/pdcounter_4)
+     LUT5:I0->O            6   0.203   0.992  dvi_rx0/dec_g/des_0/pdcounter[4]_GND_22_o_equal_50_o<4>1 (dvi_rx0/dec_g/des_0/pdcounter[4]_GND_22_o_equal_50_o)
+     LUT6:I2->O            1   0.203   0.827  dvi_rx0/dec_g/des_0/_n0278_inv1 (dvi_rx0/dec_g/des_0/_n0278_inv1)
+     LUT4:I0->O            5   0.203   0.714  dvi_rx0/dec_g/des_0/_n0278_inv2 (dvi_rx0/dec_g/des_0/_n0278_inv)
+     FDCE:CE                   0.322          dvi_rx0/dec_g/des_0/pdcounter_0
+    ----------------------------------------
+    Total                      5.028ns (1.378ns logic, 3.650ns route)
+                                       (27.4% logic, 72.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk100'
+  Clock period: 2.488ns (frequency: 401.994MHz)
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               2.488ns (Levels of Logic = 2)
+  Source:            OPTOMA/START (FF)
+  Destination:       OPTOMA/START (FF)
+  Source Clock:      clk100 rising
+  Destination Clock: clk100 rising
+
+  Data Path: OPTOMA/START to OPTOMA/START
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               6   0.447   0.849  OPTOMA/START (OPTOMA/START)
+     LUT2:I0->O            1   0.203   0.684  OPTOMA/START_glue_set (OPTOMA/START_glue_set)
+     LUT2:I0->O            1   0.203   0.000  OPTOMA/START_rstpot (OPTOMA/START_rstpot)
+     FD:D                      0.102          OPTOMA/START
+    ----------------------------------------
+    Total                      2.488ns (0.955ns logic, 1.533ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'dvi_rx0/dec_b/c1'
+  Clock period: 3.975ns (frequency: 251.579MHz)
+  Total number of paths / destination ports: 409 / 33
+-------------------------------------------------------------------------
+Delay:               3.975ns (Levels of Logic = 2)
+  Source:            fr_cntr_1 (FF)
+  Destination:       fr_cntr_0 (FF)
+  Source Clock:      dvi_rx0/dec_b/c1 rising
+  Destination Clock: dvi_rx0/dec_b/c1 rising
+
+  Data Path: fr_cntr_1 to fr_cntr_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.981  fr_cntr_1 (fr_cntr_1)
+     LUT6:I0->O            1   0.203   0.684  GND_1_o_GND_1_o_equal_26_o<15>1 (GND_1_o_GND_1_o_equal_26_o<15>)
+     LUT6:I4->O           17   0.203   1.027  GND_1_o_GND_1_o_equal_26_o<15>3 (GND_1_o_GND_1_o_equal_26_o)
+     FDR:R                     0.430          fr_cntr_0
+    ----------------------------------------
+    Total                      3.975ns (1.283ns logic, 2.692ns route)
+                                       (32.3% logic, 67.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DDC_SCL'
+  Clock period: 8.796ns (frequency: 113.693MHz)
+  Total number of paths / destination ports: 1201 / 128
+-------------------------------------------------------------------------
+Delay:               4.398ns (Levels of Logic = 4)
+  Source:            OPTOMA/rdda75_2 (FF)
+  Destination:       OPTOMA/ddata (FF)
+  Source Clock:      DDC_SCL rising
+  Destination Clock: DDC_SCL falling
+
+  Data Path: OPTOMA/rdda75_2 to OPTOMA/ddata
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.924  OPTOMA/rdda75_2 (OPTOMA/rdda75_2)
+     LUT5:I0->O            2   0.203   0.721  OPTOMA/Mmux_GND_6_o_GND_6_o_MUX_85_o15 (OPTOMA/Mmux_GND_6_o_GND_6_o_MUX_85_o15)
+     LUT3:I1->O            1   0.203   0.580  OPTOMA/Mmux_GND_6_o_GND_6_o_MUX_85_o19_SW0_SW0 (N149)
+     LUT6:I5->O            1   0.205   0.808  OPTOMA/Mmux_GND_6_o_GND_6_o_MUX_85_o19_SW0 (N54)
+     LUT6:I3->O            1   0.205   0.000  OPTOMA/Mmux_GND_6_o_GND_6_o_MUX_85_o110 (OPTOMA/GND_6_o_GND_6_o_MUX_85_o)
+     FD_1:D                    0.102          OPTOMA/ddata
+    ----------------------------------------
+    Total                      4.398ns (1.365ns logic, 3.033ns route)
+                                       (31.0% logic, 69.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'dvi_rx0/dec_b/c0'
+  Clock period: 2.436ns (frequency: 410.534MHz)
+  Total number of paths / destination ports: 2816 / 146
+-------------------------------------------------------------------------
+Delay:               2.436ns (Levels of Logic = 34)
+  Source:            DDSM/blk00000022 (FF)
+  Destination:       DDSM/blk00000106 (FF)
+  Source Clock:      dvi_rx0/dec_b/c0 rising
+  Destination Clock: dvi_rx0/dec_b/c0 rising
+
+  Data Path: DDSM/blk00000022 to DDSM/blk00000106
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.684  blk00000022 (sig00000065)
+     begin scope: 'DDSM/blk000000a5:B<0>'
+     LUT2:I0->O            1   0.203   0.000  blk000000a6 (sig000001c9)
+     MUXCY:S->O            1   0.172   0.000  blk000000a7 (sig000001ca)
+     MUXCY:CI->O           1   0.019   0.000  blk000000aa (sig000001cc)
+     MUXCY:CI->O           1   0.019   0.000  blk000000ad (sig000001ce)
+     MUXCY:CI->O           1   0.019   0.000  blk000000b0 (sig000001d0)
+     MUXCY:CI->O           1   0.019   0.000  blk000000b3 (sig000001d2)
+     MUXCY:CI->O           1   0.019   0.000  blk000000b6 (sig000001d4)
+     MUXCY:CI->O           1   0.019   0.000  blk000000b9 (sig000001d6)
+     MUXCY:CI->O           1   0.019   0.000  blk000000bc (sig000001d8)
+     MUXCY:CI->O           1   0.019   0.000  blk000000bf (sig000001da)
+     MUXCY:CI->O           1   0.019   0.000  blk000000c2 (sig000001dc)
+     MUXCY:CI->O           1   0.019   0.000  blk000000c5 (sig000001de)
+     MUXCY:CI->O           1   0.019   0.000  blk000000c8 (sig000001e0)
+     MUXCY:CI->O           1   0.019   0.000  blk000000cb (sig000001e2)
+     MUXCY:CI->O           1   0.019   0.000  blk000000ce (sig000001e4)
+     MUXCY:CI->O           1   0.019   0.000  blk000000d1 (sig000001e6)
+     MUXCY:CI->O           1   0.019   0.000  blk000000d4 (sig000001e8)
+     MUXCY:CI->O           1   0.019   0.000  blk000000d7 (sig000001ea)
+     MUXCY:CI->O           1   0.019   0.000  blk000000da (sig000001ec)
+     MUXCY:CI->O           1   0.019   0.000  blk000000dd (sig000001ee)
+     MUXCY:CI->O           1   0.019   0.000  blk000000e0 (sig000001f0)
+     MUXCY:CI->O           1   0.019   0.000  blk000000e3 (sig000001f2)
+     MUXCY:CI->O           1   0.019   0.000  blk000000e6 (sig000001f4)
+     MUXCY:CI->O           1   0.019   0.000  blk000000e9 (sig000001f6)
+     MUXCY:CI->O           1   0.019   0.000  blk000000ec (sig000001f8)
+     MUXCY:CI->O           1   0.019   0.000  blk000000ef (sig000001fa)
+     MUXCY:CI->O           1   0.019   0.000  blk000000f2 (sig000001fc)
+     MUXCY:CI->O           1   0.019   0.000  blk000000f5 (sig000001fe)
+     MUXCY:CI->O           1   0.019   0.000  blk000000f8 (sig00000200)
+     MUXCY:CI->O           1   0.019   0.000  blk000000fb (sig00000202)
+     MUXCY:CI->O           1   0.019   0.000  blk000000fe (sig00000204)
+     MUXCY:CI->O           1   0.019   0.000  blk00000101 (sig00000206)
+     MUXCY:CI->O           1   0.258   0.000  blk00000104 (C_OUT<0>)
+     end scope: 'DDSM/blk000000a5:C_OUT<0>'
+     FD:D                      0.102          blk00000106
+    ----------------------------------------
+    Total                      2.436ns (1.752ns logic, 0.684ns route)
+                                       (71.9% logic, 28.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'dvi_rx0/PLL_ISERDES/CLKOUT2'
+  Total number of paths / destination ports: 112 / 106
+-------------------------------------------------------------------------
+Offset:              3.720ns (Levels of Logic = 1)
+  Source:            dvi_rx0/ioclk_buf:LOCK (PAD)
+  Destination:       toggle (FF)
+  Destination Clock: dvi_rx0/PLL_ISERDES/CLKOUT2 rising
+
+  Data Path: dvi_rx0/ioclk_buf:LOCK to toggle
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BUFPLL:LOCK           25   0.000   1.192  dvi_rx0/ioclk_buf (dvi_rx0/bufpll_lock)
+     INV:I->O            106   0.206   1.893  dvi_rx0/reset1_INV_0 (rx0_reset)
+     FDC:CLR                   0.430          toggle
+    ----------------------------------------
+    Total                      3.720ns (0.636ns logic, 3.084ns route)
+                                       (17.1% logic, 82.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'DDC_SDA'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.974ns (Levels of Logic = 1)
+  Source:            DDC_SCL (PAD)
+  Destination:       OPTOMA/SSTOP (FF)
+  Destination Clock: DDC_SDA rising
+
+  Data Path: DDC_SCL to OPTOMA/SSTOP
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           3   1.222   0.650  DDC_SCL_IOBUF (N36)
+     FDC:D                     0.102          OPTOMA/SSTOP
+    ----------------------------------------
+    Total                      1.974ns (1.324ns logic, 0.650ns route)
+                                       (67.1% logic, 32.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'dvi_rx0/PLL_ISERDES/CLKOUT1'
+  Total number of paths / destination ports: 49 / 49
+-------------------------------------------------------------------------
+Offset:              3.720ns (Levels of Logic = 1)
+  Source:            dvi_rx0/ioclk_buf:LOCK (PAD)
+  Destination:       dvi_rx0/dec_b/phsalgn_0/cstate_FSM_FFd1 (FF)
+  Destination Clock: dvi_rx0/PLL_ISERDES/CLKOUT1 rising
+
+  Data Path: dvi_rx0/ioclk_buf:LOCK to dvi_rx0/dec_b/phsalgn_0/cstate_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BUFPLL:LOCK           25   0.000   1.192  dvi_rx0/ioclk_buf (dvi_rx0/bufpll_lock)
+     INV:I->O            106   0.206   1.893  dvi_rx0/reset1_INV_0 (rx0_reset)
+     FDC:CLR                   0.430          dvi_rx0/dec_b/phsalgn_0/bitslip_cnt_0
+    ----------------------------------------
+    Total                      3.720ns (0.636ns logic, 3.084ns route)
+                                       (17.1% logic, 82.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'DDC_SCL'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              2.754ns (Levels of Logic = 2)
+  Source:            DDC_SDA (PAD)
+  Destination:       OPTOMA/ACK (FF)
+  Destination Clock: DDC_SCL rising
+
+  Data Path: DDC_SDA to OPTOMA/ACK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O          11   1.222   1.227  DDC_SDA_IOBUF (N37)
+     LUT6:I1->O            1   0.203   0.000  OPTOMA/ACK_rstpot1 (OPTOMA/ACK_rstpot1)
+     FD:D                      0.102          OPTOMA/ACK
+    ----------------------------------------
+    Total                      2.754ns (1.527ns logic, 1.227ns route)
+                                       (55.4% logic, 44.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk100'
+  Total number of paths / destination ports: 3 / 1
+-------------------------------------------------------------------------
+Offset:              4.739ns (Levels of Logic = 5)
+  Source:            DDC_SCL (PAD)
+  Destination:       OPTOMA/START (FF)
+  Destination Clock: clk100 rising
+
+  Data Path: DDC_SCL to OPTOMA/START
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           3   1.222   0.755  DDC_SCL_IOBUF (N36)
+     LUT2:I0->O            1   0.203   0.580  OPTOMA/GND_6_o_SDA_AND_10_o_SW0 (N4)
+     LUT6:I5->O            1   0.205   0.580  OPTOMA/GND_6_o_SDA_AND_10_o (OPTOMA/GND_6_o_SDA_AND_10_o)
+     LUT2:I1->O            1   0.205   0.684  OPTOMA/START_glue_set (OPTOMA/START_glue_set)
+     LUT2:I0->O            1   0.203   0.000  OPTOMA/START_rstpot (OPTOMA/START_rstpot)
+     FD:D                      0.102          OPTOMA/START
+    ----------------------------------------
+    Total                      4.739ns (2.140ns logic, 2.599ns route)
+                                       (45.2% logic, 54.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'dvi_rx0/PLL_ISERDES/CLKOUT1'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              4.338ns (Levels of Logic = 1)
+  Source:            dvi_rx0/dec_b/de (FF)
+  Destination:       test_pin<0> (PAD)
+  Source Clock:      dvi_rx0/PLL_ISERDES/CLKOUT1 rising
+
+  Data Path: dvi_rx0/dec_b/de to test_pin<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             34   0.447   1.320  dvi_rx0/dec_b/de (dvi_rx0/dec_b/de)
+     OBUF:I->O                 2.571          test_pin_0_OBUF (test_pin<0>)
+    ----------------------------------------
+    Total                      4.338ns (3.018ns logic, 1.320ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'DDC_SCL'
+  Total number of paths / destination ports: 3 / 1
+-------------------------------------------------------------------------
+Offset:              4.484ns (Levels of Logic = 2)
+  Source:            OPTOMA/GND_6_o_SCL_DFF_27 (FF)
+  Destination:       DDC_SDA (PAD)
+  Source Clock:      DDC_SCL falling
+
+  Data Path: OPTOMA/GND_6_o_SCL_DFF_27 to DDC_SDA
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             1   0.447   0.684  OPTOMA/GND_6_o_SCL_DFF_27 (OPTOMA/GND_6_o_SCL_DFF_27)
+     LUT2:I0->O            1   0.203   0.579  OPTOMA/ddataLogicTrst1 (OPTOMA/ddata)
+     IOBUF:I->IO               2.571          DDC_SDA_IOBUF (DDC_SDA)
+    ----------------------------------------
+    Total                      4.484ns (3.221ns logic, 1.263ns route)
+                                       (71.8% logic, 28.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'dvi_rx0/PLL_ISERDES/CLKOUT2'
+  Total number of paths / destination ports: 50 / 50
+-------------------------------------------------------------------------
+Offset:              1.161ns (Levels of Logic = 0)
+  Source:            tmdsclkint_0 (FF)
+  Destination:       clkout/oserdes_s:D2 (PAD)
+  Source Clock:      dvi_rx0/PLL_ISERDES/CLKOUT2 rising
+
+  Data Path: tmdsclkint_0 to clkout/oserdes_s:D2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.447   0.714  tmdsclkint_0 (tmdsclkint_0)
+    OSERDES2:D1                0.000          clkout/oserdes_s
+    ----------------------------------------
+    Total                      1.161ns (0.447ns logic, 0.714ns route)
+                                       (38.5% logic, 61.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 99 / 92
+-------------------------------------------------------------------------
+Delay:               3.290ns (Levels of Logic = 1)
+  Source:            dvi_rx0/ioclk_buf:LOCK (PAD)
+  Destination:       oserdes2/oserdes_s:RST (PAD)
+
+  Data Path: dvi_rx0/ioclk_buf:LOCK to oserdes2/oserdes_s:RST
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BUFPLL:LOCK           25   0.000   1.192  dvi_rx0/ioclk_buf (dvi_rx0/bufpll_lock)
+     INV:I->O            106   0.206   1.893  dvi_rx0/reset1_INV_0 (rx0_reset)
+    OSERDES2:RST               0.000          oserdes2/oserdes_s
+    ----------------------------------------
+    Total                      3.290ns (0.206ns logic, 3.084ns route)
+                                       (6.3% logic, 93.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock DDC_SCL
+---------------------------------+---------+---------+---------+---------+
+                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------+---------+---------+---------+---------+
+DDC_SCL                          |    5.527|         |    4.398|         |
+DDC_SDA                          |    2.484|         |         |         |
+OPTOMA/START                     |         |    5.459|    4.348|         |
+OPTOMA/cSTATE[4]_GND_7_o_Mux_30_o|         |    2.876|         |         |
+OPTOMA/cSTATE[4]_GND_8_o_Mux_31_o|         |    2.890|         |         |
+clk100                           |    2.509|         |         |         |
+---------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock DDC_SDA
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk100         |    1.621|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock OPTOMA/START
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DDC_SDA        |         |         |    2.418|         |
+clk100         |         |         |    2.443|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock OPTOMA/cSTATE[4]_GND_7_o_Mux_30_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DDC_SCL        |         |         |    2.585|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock OPTOMA/cSTATE[4]_GND_8_o_Mux_31_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DDC_SCL        |         |         |    2.801|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk100
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DDC_SCL        |    4.956|         |         |         |
+OPTOMA/START   |         |    5.133|         |         |
+clk100         |    2.488|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock dvi_rx0/PLL_ISERDES/CLKOUT1
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+dvi_rx0/PLL_ISERDES/CLKOUT1|    8.865|    4.809|    3.285|         |
+dvi_rx0/PLL_ISERDES/CLKOUT2|    2.634|         |         |         |
+dvi_rx0/dec_b/c0           |    2.966|         |         |         |
+dvi_rx0/dec_b/c1           |    2.211|         |         |         |
+---------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock dvi_rx0/PLL_ISERDES/CLKOUT2
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+dvi_rx0/PLL_ISERDES/CLKOUT1|    1.671|         |         |         |
+dvi_rx0/PLL_ISERDES/CLKOUT2|    5.028|         |         |         |
+---------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock dvi_rx0/dec_b/c0
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+dvi_rx0/PLL_ISERDES/CLKOUT1|    2.967|         |         |         |
+dvi_rx0/dec_b/c0           |    2.436|         |         |         |
+---------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock dvi_rx0/dec_b/c1
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+dvi_rx0/dec_b/c1|    3.975|         |         |         |
+----------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.27 secs
+ 
+--> 
+
+Total memory usage is 337388 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  137 (   0 filtered)
+Number of infos    :   69 (   0 filtered)
+

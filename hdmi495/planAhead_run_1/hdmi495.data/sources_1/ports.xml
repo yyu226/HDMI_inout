@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Bus Id="RX0_TMDS">
+			<Port Id="3" Dir="IN"/>
+			<Port Id="2" Dir="IN"/>
+			<Port Id="1" Dir="IN"/>
+			<Port Id="0" Dir="IN"/>
+		</Bus>
+		<Bus Id="RX0_TMDSB">
+			<Port Id="3" Dir="IN"/>
+			<Port Id="2" Dir="IN"/>
+			<Port Id="1" Dir="IN"/>
+			<Port Id="0" Dir="IN"/>
+		</Bus>
+		<Bus Id="TX0_TMDS">
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Bus Id="TX0_TMDSB">
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Bus Id="LED">
+			<Port Id="7" Dir="OUT"/>
+			<Port Id="6" Dir="OUT"/>
+			<Port Id="5" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Port Id="clk100" Dir="IN"/>
+		<Port Id="MSW" Dir="IN"/>
+		<Port Id="DDC_SCL" Dir="INOUT"/>
+		<Port Id="DDC_SDA" Dir="INOUT"/>
+		<Port Id="test_pin" Dir="OUT"/>
+		<DiffPair Pos="RX0_TMDS[3]" Neg="RX0_TMDSB[3]"/>
+		<DiffPair Pos="RX0_TMDS[2]" Neg="RX0_TMDSB[2]"/>
+		<DiffPair Pos="RX0_TMDS[1]" Neg="RX0_TMDSB[1]"/>
+		<DiffPair Pos="RX0_TMDS[0]" Neg="RX0_TMDSB[0]"/>
+		<DiffPair Pos="TX0_TMDS[3]" Neg="TX0_TMDSB[3]"/>
+		<DiffPair Pos="TX0_TMDS[2]" Neg="TX0_TMDSB[2]"/>
+		<DiffPair Pos="TX0_TMDS[1]" Neg="TX0_TMDSB[1]"/>
+		<DiffPair Pos="TX0_TMDS[0]" Neg="TX0_TMDSB[0]"/>
+	</Ifc>
+</Interface>
+

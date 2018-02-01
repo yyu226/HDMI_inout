@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Tue Dec 19 14:49:50 2017
+# Process ID: 11700
+# Log file: C:/Users/Ying Yu/Desktop/SelectIO/hdmi495/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/Ying Yu/Desktop/SelectIO/hdmi495/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {C:/Users/Ying Yu/Desktop/SelectIO/hdmi495/pa.fromNetlist.tcl}
+startgroup
+set_property package_pin G1 [get_ports {test_pin[1]}]
+endgroup
+startgroup
+set_property package_pin H1 [get_ports {test_pin[0]}]
+endgroup
+save_constraints

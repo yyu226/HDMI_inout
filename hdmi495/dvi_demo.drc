@@ -1,0 +1,51 @@
+Release 14.6 Drc P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Wed Jan 17 16:17:04 2018
+
+drc -z dvi_demo.ncd dvi_demo.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   OPTOMA/cSTATE[4]_GND_7_o_Mux_30_o is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   OPTOMA/cSTATE[4]_GND_8_o_Mux_31_o is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net OPTOMA/START is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net dvi_rx0/dec_b/c1 is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   TX0_TMDS<0>_PULLUP is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   TX0_TMDS<1>_PULLUP is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   TX0_TMDS<2>_PULLUP is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   TX0_TMDS<3>_PULLUP is set but the tri state is not configured. 
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+WARNING:PhysDesignRules:1863 - Unexpected differential configuration for comp
+   TX0_TMDS<0>. The TMDS0/OBUFDS buffer is programmed as a true differential.
+   Adding a pullup, pulldown, or keeper to a differential IO can create signal
+   integrity problems and can violate specifications.
+WARNING:PhysDesignRules:1863 - Unexpected differential configuration for comp
+   TX0_TMDS<1>. The TMDS1/OBUFDS buffer is programmed as a true differential.
+   Adding a pullup, pulldown, or keeper to a differential IO can create signal
+   integrity problems and can violate specifications.
+WARNING:PhysDesignRules:1863 - Unexpected differential configuration for comp
+   TX0_TMDS<2>. The TMDS2/OBUFDS buffer is programmed as a true differential.
+   Adding a pullup, pulldown, or keeper to a differential IO can create signal
+   integrity problems and can violate specifications.
+WARNING:PhysDesignRules:1863 - Unexpected differential configuration for comp
+   TX0_TMDS<3>. The TMDS3/OBUFDS buffer is programmed as a true differential.
+   Adding a pullup, pulldown, or keeper to a differential IO can create signal
+   integrity problems and can violate specifications.
+DRC detected 0 errors and 13 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
